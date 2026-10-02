@@ -1,0 +1,11 @@
+services:
+  - type: static
+    name: hue-lab
+    branch: master
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
