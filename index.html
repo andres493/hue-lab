@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HUE LAB by BLIZZ | Óptica Profesional</title>
+<meta name="description" content="Óptica profesional en Armenia, Quindío. Examen visual sin costo, lentes de medida, de contacto, especiales, gafas de sol y monturas. Cuida tu vista con HUE LAB by BLIZZ.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HUE LAB by BLIZZ">
+<meta property="og:title" content="HUE LAB by BLIZZ | Óptica Profesional">
+<meta property="og:description" content="Óptica profesional en Armenia, Quindío. Examen visual sin costo, lentes de medida, de contacto, especiales, gafas de sol y monturas.">
+<meta property="og:image" content="https://andres493.github.io/hue-lab/img/logo.jpg">
+<meta property="og:url" content="https://andres493.github.io/hue-lab/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ccircle cx='24' cy='30' r='12' fill='%234d96ff'/%3E%3Ccircle cx='40' cy='30' r='12' fill='%23ffd93d'/%3E%3Cpath d='M32 14v32' stroke='%23111' stroke-width='3'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Optician",
+  "name": "HUE LAB by BLIZZ",
+  "url": "https://andres493.github.io/hue-lab/",
+  "image": "https://andres493.github.io/hue-lab/img/logo.jpg",
+  "description": "Óptica profesional en Armenia, Quindío. Examen visual sin costo, lentes de medida, de contacto, especiales, gafas de sol y monturas.",
+  "telephone": "+573008131531",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle 1 Norte #16-12, Barrio Nueva Cecilia",
+    "addressLocality": "Armenia",
+    "addressRegion": "Quindío",
+    "addressCountry": "CO"
+  }
+}
+</script>
+<style>
+  :root{
+    --bg:#ffffff;
+    --surface:#ffffff;
+    --ink:#101416;
+    --muted:#52666c;
+    --line:#d7e8ea;
+    --radius:20px;
+    --shadow:0 20px 50px -20px rgba(20,20,20,.18);
+    --prism:linear-gradient(120deg,#08afe5,#118f91,#875014,#7a43b6);
+    --serif:Georgia,"Times New Roman",serif;
+    --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);
+  }
+  .eyebrow::before{content:"";width:24px;height:2px;background:var(--prism);border-radius:2px}
+  .grad-text{
+    background:var(--prism);
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:fixed;inset:0 0 auto 0;z-index:50;
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    background:rgba(255,255,255,.9);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.02em}
+  .logo-image{
+    display:block;height:52px;width:auto;object-fit:contain;
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:6px 10px;box-shadow:0 4px 14px -8px rgba(20,20,20,.25);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .logo:hover .logo-image{transform:translateY(-1px);box-shadow:0 8px 20px -10px rgba(20,20,20,.35)}
+  @media(max-width:560px){.logo-image{height:42px;padding:5px 8px}}
+  .logo-badge{
+    width:38px;height:38px;border-radius:11px;background:var(--ink);
+    display:grid;place-items:center;
+  }
+  .logo-badge svg{width:22px;height:22px}
+  .logo small{display:block;font-size:.6rem;font-weight:500;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+  .nav-links{display:flex;gap:34px;font-size:.92rem;font-weight:500}
+  .nav-links a{color:#3c3c3c;transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a.active{color:var(--ink);font-weight:600}
+  .nav-links a.active::after{content:"";display:block;height:2px;background:var(--prism);border-radius:2px;margin-top:3px;animation:under .3s ease}
+
+  /* PAGE WINDOWS */
+  [data-page].hidden{display:none}
+  [data-page]:not(.hidden){animation:pageIn .45s ease}
+  @keyframes pageIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes under{from{width:0}to{width:100%}}
+  .nav-cta{
+    padding:10px 20px;border-radius:999px;background:var(--ink);color:#fff;
+    font-weight:600;font-size:.88rem;transition:transform .2s,background .2s;
+  }
+  .nav-cta:hover{background:#087d83;transform:translateY(-1px)}
+  .burger{display:none;background:none;border:0;cursor:pointer}
+  .burger span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;transition:.25s}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:170px 0 90px;position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;top:-120px;right:-120px;width:520px;height:520px;
+    border-radius:50%;background:radial-gradient(circle,rgba(8,175,229,.16),transparent 65%);
+    filter:blur(20px);
+  }
+  .hero::after{
+    content:"";position:absolute;bottom:-160px;left:-120px;width:460px;height:460px;
+    border-radius:50%;background:radial-gradient(circle,rgba(135,80,20,.13),transparent 65%);
+    filter:blur(20px);
+  }
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .hero h1{
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(2.4rem,5.5vw,4.1rem);line-height:1.08;margin:18px 0 22px;letter-spacing:-.01em;
+  }
+  .hero p.lead{font-size:1.08rem;color:var(--muted);max-width:480px;margin-bottom:32px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;
+    font-weight:600;font-size:.95rem;transition:transform .2s,box-shadow .2s;
+  }
+  .btn-primary{background:var(--ink);color:#fff}
+  .btn-primary:hover{background:#087d83;transform:translateY(-2px);box-shadow:var(--shadow)}
+  .btn-ghost{border:1px solid var(--ink);color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:#fff}
+  .hero-meta{display:flex;gap:30px;margin-top:44px;padding-top:26px;border-top:1px solid var(--line)}
+  .hero-meta b{font-family:var(--serif);font-weight:400;font-size:1.5rem;display:block}
+  .hero-meta span{font-size:.8rem;color:var(--muted)}
+
+  .glasses-wrap{position:relative;display:flex;justify-content:center}
+  .glasses-card{
+    width:340px;padding:18px;border-radius:var(--radius);
+    background:var(--surface);box-shadow:var(--shadow);
+  }
+  .glasses-svg{position:relative}
+  .prism-chip{
+    position:absolute;bottom:14px;left:-22px;background:#fff;border-radius:12px;
+    box-shadow:var(--shadow);padding:10px 14px;display:flex;align-items:center;gap:8px;
+    font-size:.78rem;font-weight:600;
+  }
+  .prism-dot{width:18px;height:18px;border-radius:50%;background:var(--prism)}
+  .float-card{
+    position:absolute;top:-18px;right:-14px;background:var(--ink);color:#fff;
+    border-radius:14px;padding:12px 16px;font-size:.78rem;line-height:1.4;box-shadow:var(--shadow);
+  }
+  .float-card b{display:block;font-family:var(--serif);font-size:1rem}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    overflow:hidden;background:var(--surface);padding:16px 0;white-space:nowrap;
+  }
+  .marquee-track{display:inline-block;animation:scroll 28s linear infinite}
+  .marquee-track span{display:inline-block;margin:0 34px;font-weight:600;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .marquee-track span::before{content:"✦";color:#c9a227;margin-right:34px}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:96px 0}
+  .sec-head{max-width:620px;margin-bottom:52px}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-head.center .eyebrow{justify-content:center}
+  .sec-head.center .eyebrow::before{display:none}
+  .sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.15;margin:14px 0 12px}
+  .sec-head p{color:var(--muted)}
+
+  /* SERVICES */
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:34px 28px;transition:transform .25s,box-shadow .25s;
+  }
+  .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .service-ico{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:20px;
+    background:var(--ink);color:#fff;
+  }
+  .service-ico svg{width:26px;height:26px}
+  .service-card:nth-child(2) .service-ico{background:linear-gradient(135deg,#08afe5,#118f91)}
+  .service-card:nth-child(3) .service-ico{background:linear-gradient(135deg,#118f91,#7a43b6)}
+  .service-card:nth-child(4) .service-ico{background:linear-gradient(135deg,#08afe5,#7a43b6)}
+  .service-card:nth-child(5) .service-ico{background:linear-gradient(135deg,#875014,#08afe5)}
+  .service-card h3{font-size:1.14rem;margin-bottom:8px}
+  .service-card p{color:var(--muted);font-size:.92rem}
+
+  /* GALLERY */
+  .gallery{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .g-item{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:transform .25s,box-shadow .25s;background:#fff}
+  .g-item:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .g-pic{aspect-ratio:1/1;position:relative;display:grid;place-items:center}
+  .g-pic svg{width:60%;height:60%}
+  .g-body{padding:18px 20px 22px}
+  .g-body h4{font-size:1rem;margin-bottom:4px}
+  .g-body p{font-size:.82rem;color:var(--muted)}
+  .g-tag{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+
+  /* CATALOG */
+  .cat-filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:42px}
+  .cat-filters button{
+    padding:11px 22px;border-radius:999px;border:1px solid var(--line);
+    background:var(--surface);font:600 .86rem var(--sans);cursor:pointer;color:var(--muted);
+    transition:border-color .2s,color .2s,background .2s;
+  }
+  .cat-filters button:hover{border-color:var(--ink);color:var(--ink)}
+  .cat-filters button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .prod-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;
+  }
+  .prod-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .prod-pic{aspect-ratio:4/3;display:grid;place-items:center;position:relative;overflow:hidden;background:#edf7f8}
+  .prod-pic img{width:100%;height:100%;object-fit:cover}
+  .prod-ph{
+    display:grid;justify-items:center;text-align:center;gap:6px;
+    color:#aca497;font-size:.78rem;padding:20px;
+  }
+  .prod-ph::before{content:"Agrega tu foto";display:block;padding:26px 0;font-weight:600;color:#c9c2b4}
+  .prod-ph b{font-weight:600;color:#8f8779}
+  .prod-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:5px;flex:1}
+  .prod-cat{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .prod-body h3{font-size:1.02rem}
+  .prod-body p{font-size:.84rem;color:var(--muted);flex:1}
+  .prod-cta{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;
+    padding:12px;border-radius:13px;background:var(--ink);color:#fff;
+    font-weight:600;font-size:.86rem;transition:background .2s,transform .2s;
+  }
+  .prod-cta:hover{background:#25d366;transform:translateY(-1px)}
+  .prod-pic{cursor:pointer}
+  .prod-pic img{transition:transform .4s ease}
+  .prod-card:hover .prod-pic img{transform:scale(1.04)}
+  .prod-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+  .prod-views{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px;border-radius:13px;border:1px solid var(--ink);background:transparent;color:var(--ink);
+    font-weight:600;font-size:.86rem;font-family:var(--sans);cursor:pointer;transition:background .2s,color .2s;
+  }
+  .prod-views:hover{background:var(--ink);color:#fff}
+  .prod-wa{
+    display:inline-flex;align-items:center;justify-content:center;padding:12px;border-radius:13px;
+    background:var(--ink);color:#fff;font-weight:600;font-size:.86rem;
+    transition:background .2s,transform .2s;
+  }
+  .prod-wa:hover{background:#25d366;transform:translateY(-1px)}
+  .prod-actions .prod-cta{margin-top:0}
+  .prod-count{
+    position:absolute;bottom:12px;right:12px;background:rgba(20,20,20,.72);color:#fff;
+    font-size:.7rem;font-weight:600;padding:5px 11px;border-radius:999px;display:flex;align-items:center;gap:6px;
+    backdrop-filter:blur(4px);
+  }
+
+  /* GALLERY MODAL */
+  .gal-modal{
+    position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;padding:24px;
+  }
+  .gal-modal.open{display:flex;animation:pageIn .3s ease}
+  .gal-backdrop{position:absolute;inset:0;background:rgba(12,12,12,.72);backdrop-filter:blur(6px)}
+  .gal-panel{
+    position:relative;background:var(--surface);border-radius:calc(var(--radius) + 6px);
+    width:min(980px,100%);max-height:92vh;overflow:auto;box-shadow:0 40px 100px -30px rgba(0,0,0,.6);
+    display:flex;flex-direction:column;
+  }
+  .gal-close{
+    position:absolute;top:14px;right:16px;z-index:3;width:40px;height:40px;border-radius:50%;
+    border:0;background:rgba(255,255,255,.92);font-size:1.4rem;line-height:1;cursor:pointer;color:var(--ink);
+    box-shadow:var(--shadow);
+  }
+  .gal-close:hover{background:var(--ink);color:#fff}
+  .gal-main{position:relative;background:#eceae5;display:grid;place-items:center;min-height:320px}
+  .gal-main img{width:100%;max-height:60vh;object-fit:contain;display:block}
+  .gal-nav{
+    position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;
+    border:0;background:rgba(255,255,255,.92);font-size:1.6rem;line-height:1;cursor:pointer;color:var(--ink);
+    box-shadow:var(--shadow);display:grid;place-items:center;
+  }
+  .gal-nav:hover{background:var(--ink);color:#fff}
+  .gal-prev{left:14px}
+  .gal-next{right:14px}
+  .gal-info{display:flex;justify-content:space-between;gap:24px;padding:24px 28px 6px;flex-wrap:wrap}
+  .gal-info h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin:4px 0 6px}
+  .gal-info p{color:var(--muted);font-size:.9rem;max-width:520px}
+  .gal-side{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+  .gal-thumbs{display:flex;gap:10px;padding:18px 28px 26px;overflow-x:auto}
+  .gal-thumbs img{
+    width:76px;height:60px;object-fit:cover;border-radius:10px;cursor:pointer;flex:none;
+    border:2px solid transparent;opacity:.72;transition:.2s;
+  }
+  .gal-thumbs img:hover{opacity:1}
+  .gal-thumbs img.active{border-color:var(--ink);opacity:1}
+
+  /* COLLECTION (fotos reales) */
+  .g-pic.has-photo{padding:0}
+  .g-pic.has-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+  .g-item:hover .g-pic img{transform:scale(1.05)}
+  .g-item.clickable{cursor:pointer}
+
+  /* SPECIALS */
+  .specials{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .spec-panel{
+    background:var(--surface);border:1px solid var(--line);border-radius:calc(var(--radius) + 10px);
+    padding:40px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+  }
+  .spec-panel::before{content:"";position:absolute;inset:auto 40px 40px;height:60%;border-radius:24px;background:var(--prism);opacity:.12;filter:blur(10px)}
+  .spec-panel h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin-bottom:8px}
+  .spec-panel > p{color:var(--muted);font-size:.95rem}
+  .tech-list{margin-top:26px;display:grid;gap:14px;position:relative}
+  .tech-list li{list-style:none;display:flex;gap:14px;align-items:flex-start;font-size:.95rem}
+  .tech-list li b{display:block;font-size:.9rem}
+  .tech-list li span{color:var(--muted);font-size:.85rem}
+  .tech-check{flex:none;width:24px;height:24px;border-radius:8px;background:var(--prism);color:#fff;display:grid;place-items:center;font-size:.7rem;margin-top:2px}
+
+  /* PROCESS */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step}
+  .step{border-top:2px solid var(--line);padding-top:22px;position:relative;background:var(--surface);border-radius:0 0 var(--radius) var(--radius);padding:22px 22px 24px}
+  .step::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-13px;right:18px;background:var(--bg);padding-left:12px;font-family:var(--serif);font-size:1rem;color:var(--muted)}
+  .step::after{content:"✓";position:absolute;top:22px;left:22px;width:26px;height:26px;border-radius:8px;background:var(--prism);color:#fff;display:grid;place-items:center;font-size:.72rem;font-weight:700}
+  .step h3{font-family:var(--serif);font-weight:400;font-size:1.2rem;margin:0 0 8px 0;padding-left:40px}
+  .step p{color:var(--muted);font-size:.9rem}
+  .proc-cta{text-align:center;margin-top:56px}
+  .proc-cta p{color:var(--muted);margin-bottom:18px}
+
+  /* TRUST / GARANTÍAS */
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:64px}
+  .trust-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px 22px;text-align:center;transition:transform .25s,box-shadow .25s;
+  }
+  .trust-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .trust-ico{
+    width:52px;height:52px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;
+    background:var(--ink);color:#fff;
+  }
+  .trust-ico svg{width:24px;height:24px}
+  .trust-card:nth-child(2) .trust-ico{background:linear-gradient(135deg,#ff6b6b,#ffd93d)}
+  .trust-card:nth-child(3) .trust-ico{background:linear-gradient(135deg,#6bcb77,#4d96ff)}
+  .trust-card:nth-child(4) .trust-ico{background:linear-gradient(135deg,#4d96ff,#9b5de5)}
+  .trust-card h4{font-size:1rem;margin-bottom:6px}
+  .trust-card p{color:var(--muted);font-size:.84rem}
+  .pay-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:20px}
+  .pay-chip{
+    padding:10px 18px;border-radius:999px;background:var(--surface);border:1px solid var(--line);
+    font-size:.84rem;font-weight:600;color:#3c3c3c;display:inline-flex;align-items:center;gap:8px;
+  }
+
+  /* BANDA DE CONFIANZA (inicio) */
+  .trustband{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);padding:26px 0}
+  .tb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .tb{display:flex;align-items:center;gap:14px;font-size:.9rem}
+  .tb-ico{flex:none;width:44px;height:44px;border-radius:12px;background:var(--ink);color:#fff;display:grid;place-items:center}
+  .tb-ico svg{width:22px;height:22px}
+  .tb b{display:block;font-size:.9rem}
+  .tb span{color:var(--muted);font-size:.8rem}
+
+  /* TESTIMONIALS */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .testi{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .stars{color:#c9a227;letter-spacing:3px;font-size:.9rem;margin-bottom:14px}
+  .testi p{font-family:var(--serif);font-size:1.02rem;line-height:1.5;margin-bottom:20px}
+  .testi .who{display:flex;align-items:center;gap:12px}
+  .avatar{width:42px;height:42px;border-radius:50%;background:var(--prism);display:grid;place-items:center;color:#fff;font-weight:700;font-family:var(--serif)}
+  .testi .who b{display:block;font-size:.9rem}
+  .testi .who span{font-size:.78rem;color:var(--muted)}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:#fff;border-radius:calc(var(--radius) + 14px);margin:0 24px;padding:56px}
+  .contact .wrap{max-width:100%;padding:0}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.4vw,2.5rem);line-height:1.15;margin:16px 0 10px}
+  .contact p.sub{color:rgba(255,255,255,.7);max-width:430px;margin-bottom:30px}
+  .c-list{display:grid;gap:16px}
+  .c-item{display:flex;gap:16px;align-items:flex-start}
+  .c-ico{flex:none;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(255,255,255,.12)}
+  .c-ico svg{width:22px;height:22px}
+  .c-item b{display:block;font-size:.9rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.12em;font-size:.68rem}
+  .c-item a,.c-item span{font-size:1rem;line-height:1.4}
+  .c-item a:hover{text-decoration:underline}
+  .map-embed{border-radius:20px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.6);background:#2a2a2a;min-height:340px}
+  .map-embed iframe{width:100%;height:340px;border:0;filter:grayscale(1) contrast(1.05) invert(.92) hue-rotate(180deg)}
+
+  /* HOURS */
+  .hours{display:grid;grid-template-columns:1fr 1fr;gap:10px 34px;margin-top:30px;font-size:.92rem}
+  .hours div{display:flex;justify-content:space-between;gap:18px;border-bottom:1px dashed rgba(255,255,255,.18);padding-bottom:8px}
+  .hours span:last-child{color:rgba(255,255,255,.7)}
+
+  /* FOOTER */
+  footer{padding:44px 0 120px;color:var(--muted);font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer .logo{color:var(--ink)}
+
+  /* WHATSAPP FLOAT */
+  .wa-float{
+    position:fixed;right:24px;bottom:24px;z-index:60;width:58px;height:58px;border-radius:50%;
+    background:#25d366;display:grid;place-items:center;box-shadow:0 14px 34px -10px rgba(37,211,102,.7);
+    transition:transform .2s;
+  }
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:1020px){
+    .services-grid,.gallery-grid,.cat-grid,.steps,.testi-grid,.trust-grid,.tb-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery-grid .g-item:last-child{grid-column:span 2}
+  }
+  @media(max-width:860px){
+    .nav-links{display:none}
+    .nav-cta{display:none}
+    .burger{display:block}
+    .nav-links.open{
+      display:flex;flex-direction:column;gap:6px;position:absolute;top:72px;left:0;right:0;
+      background:var(--surface);border-bottom:1px solid var(--line);padding:16px 24px 22px;
+      box-shadow:var(--shadow);
+    }
+    .nav-links.open a{padding:12px 0;border-bottom:1px solid var(--line);font-weight:600}
+    .hero-grid,.specials,.contact-grid{grid-template-columns:1fr}
+    .hero{padding-top:140px}
+    .glasses-wrap{order:-1}
+    .glasses-card{width:min(340px,100%)}
+    .float-card{right:4px}
+  }
+  @media(max-width:560px){
+    .services-grid,.gallery-grid,.cat-grid,.steps,.testi-grid,.trust-grid,.tb-grid{grid-template-columns:1fr}
+    .gallery-grid .g-item:last-child{grid-column:auto}
+    section{padding:72px 0}
+    .contact{padding:40px 26px;margin:0 16px}
+    .hero-meta{gap:18px;flex-wrap:wrap}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#inicio" aria-label="HUE LAB by BLIZZ">
+      <img class="logo-image" src="img/logo.jpg" alt="HUE LAB by BLIZZ">
+    </a>
+    <nav class="nav-links" id="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#proceso">Cómo comprar</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="nav-cta" href="#contacto">Agenda tu visita</a>
+    <button class="burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="inicio" data-page="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Óptica profesional</span>
+        <h1>La vista merece<br>su propio <span class="grad-text">laboratorio de color</span></h1>
+        <p class="lead">En HUE LAB by BLIZZ combinamos tecnología de precisión y estilo para ofrecerte lentes que ven tan bien como se ven.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contacto">Agenda tu examen
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#catalogo">Ver colección</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>+10</b><span>Años de experiencia</span></div>
+          <div><b>+4.500</b><span>Clientes satisfechos</span></div>
+          <div><b>100%</b><span>Garantía profesional</span></div>
+        </div>
+      </div>
+      <div class="glasses-wrap">
+        <div class="glasses-card">
+          <div class="glasses-svg">
+            <svg class="g-pic" viewBox="0 0 340 340">
+              <defs>
+                <linearGradient id="prism" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ff6b6b"/><stop offset=".25" stop-color="#ffd93d"/>
+                  <stop offset=".5" stop-color="#6bcb77"/><stop offset=".75" stop-color="#4d96ff"/>
+                  <stop offset="1" stop-color="#9b5de5"/>
+                </linearGradient>
+                <clipPath id="lensClip"><path d="M65 120 C65 90 92 80 120 80 C148 80 175 90 175 120 L175 190 C175 220 148 230 120 230 C92 230 65 220 65 190 Z"/></clipPath>
+              </defs>
+              <circle cx="65" cy="130" r="95" fill="#4d96ff" opacity=".22"/>
+              <circle cx="275" cy="150" r="105" fill="#ffd93d" opacity=".24"/>
+              <circle cx="170" cy="260" r="70" fill="#9b5de5" opacity=".16"/>
+              <rect x="90" y="90" width="200" height="200" rx="30" fill="#fff" opacity=".9"/>
+              <path d="M115 120 C115 95 138 78 165 78 C192 78 215 95 215 120 L215 200 C215 225 192 242 165 242 C138 242 115 225 115 200 Z" fill="#f3f1ee" stroke="#dcd8d2" stroke-width="2"/>
+              <circle cx="165" cy="178" r="34" fill="url(#prism)" opacity=".85"/>
+              <path d="M60 120 L112 120 M218 120 L280 120" stroke="#222" stroke-width="6" stroke-linecap="round"/>
+              <path d="M60 120 C38 118 30 108 34 90 M280 120 C302 118 310 108 306 90" stroke="#222" stroke-width="6" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="prism-chip"><span class="prism-dot"></span> Realidad a todo color</div>
+          <div class="float-card"><b>+4.500</b> pacientes con una visión perfecta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true" data-page="inicio">
+    <div class="marquee-track" id="marquee">
+      <span>Lentes de medida</span><span>Lentes de contacto</span><span>Gafas de sol</span>
+      <span>Lentes fotocromáticas</span><span>Anti luz azul</span><span>Progresivos</span>
+      <span>Monturas premium</span>
+    </div>
+  </div>
+
+  <!-- BANDA DE CONFIANZA -->
+  <div class="trustband reveal" data-page="inicio">
+    <div class="wrap tb-grid">
+      <div class="tb">
+        <span class="tb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 5-5"/></svg></span>
+        <div><b>Examen visual sin costo</b><span>Valoración profesional</span></div>
+      </div>
+      <div class="tb">
+        <span class="tb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg></span>
+        <div><b>Garantía real</b><span>Graduación y ajuste 100%</span></div>
+      </div>
+      <div class="tb">
+        <span class="tb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></span>
+        <div><b>+4.500 clientes</b><span>Una óptica de confianza</span></div>
+      </div>
+      <div class="tb">
+        <span class="tb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span>
+        <div><b>Pago flexible</b><span>Efectivo, Nequi, tarjetas</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="servicios" data-page="servicios">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">Qué hacemos</span>
+        <h2>Servicios ópticos de precisión</h2>
+        <p>Cada cliente recibe una valoración completa y la asesoría de especialistas para encontrar la solución perfecta.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="10" r="5"/><circle cx="15" cy="14" r="5"/><path d="M6 3v1M9 3v1M12 3v1M6 21v-2M9 21v-2"/></svg>
+          </div>
+          <h3>Lentes de medida</h3>
+          <p>Exámenes visuales completos y graduación exacta con equipos de última generación.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3m0 12v3"/></svg>
+          </div>
+          <h3>Lentes de contacto</h3>
+          <p>Contactología profesional: adaptación, seguimiento y las mejores marcas del mercado.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Gafas de sol</h3>
+          <p>Protección UV400 con estilo. Colecciones que combinan moda y salud ocular.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8l8-5 8 5v8l-8 5-8-5z"/><path d="M12 3v8M4 8l8 5 8-5"/></svg>
+          </div>
+          <h3>Monturas premium</h3>
+          <p>Armazones para cada rostro y personalidad: clásicas, vanguardistas y de autor.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a6 6 0 016 6c0 3-1 5-1 6v1h-10v-1c0-1-1-3-1-6a6 6 0 016-6z"/><path d="M9 19h6"/><path d="M12 3V1"/></svg>
+          </div>
+          <h3>Lentes especiales</h3>
+          <p>Fotocromáticas, anti luz azul, progresivas y de alto rendimiento.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <h3>Asesoría personalizada</h3>
+          <p>Te ayudamos a elegir la solución ideal según tu rutina, trabajo y estilo de vida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="coleccion" data-page="catalogo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Nuestra colección</span>
+        <h2>Diseño que realza tu mirada</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="g-item reveal clickable" data-open-model="1">
+          <div class="g-pic has-photo">
+            <span class="g-tag">Nuevo</span>
+            <img src="img/products/hue-01/hue-01-1-t.jpg" alt="Modelo HUE 01" loading="lazy">
+          </div>
+          <div class="g-body"><h4>Modelo HUE 01</h4><p>Ver todas las vistas</p></div>
+        </div>
+        <div class="g-item reveal clickable" data-open-model="6">
+          <div class="g-pic has-photo">
+            <span class="g-tag">Destacado</span>
+            <img src="img/products/hue-06/hue-06-1-t.jpg" alt="Modelo HUE 06" loading="lazy">
+          </div>
+          <div class="g-body"><h4>Modelo HUE 06</h4><p>Ver todas las vistas</p></div>
+        </div>
+        <div class="g-item reveal clickable" data-open-model="12">
+          <div class="g-pic has-photo">
+            <span class="g-tag">Destacado</span>
+            <img src="img/products/hue-12/hue-12-1-t.jpg" alt="Modelo HUE 12" loading="lazy">
+          </div>
+          <div class="g-body"><h4>Modelo HUE 12</h4><p>Ver todas las vistas</p></div>
+        </div>
+        <div class="g-item reveal clickable" data-open-model="18">
+          <div class="g-pic has-photo">
+            <span class="g-tag">Nuevo</span>
+            <img src="img/products/hue-18/hue-18-1-t.jpg" alt="Modelo HUE 18" loading="lazy">
+          </div>
+          <div class="g-body"><h4>Modelo HUE 18</h4><p>Ver todas las vistas</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="catalog" id="catalogo" data-page="catalogo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Catálogo</span>
+        <h2>Explora nuestro catálogo</h2>
+        <p>20 modelos. Abre cada uno para ver todas sus vistas y consúltalo por WhatsApp.</p>
+      </div>
+      <div class="cat-filters" id="cat-filters"></div>
+      <div class="cat-grid" id="cat-grid"></div>
+    </div>
+  </section>
+
+  <!-- SPECIALS -->
+  <section data-page="servicios">
+    <div class="wrap specials">
+      <div class="sec-head reveal" style="margin-bottom:0">
+        <span class="eyebrow">Tecnología</span>
+        <h2>Lentes especiales pensadas para tu día a día</h2>
+        <p>Soluciones que se adaptan a cada momento: trabajo frente a pantallas, conducción, deporte o lectura.</p>
+      </div>
+      <div class="spec-panel reveal">
+        <h3>¿Cuál necesitas?</h3>
+        <p>Resolvemos las dudas más frecuentes con una valoración sin costo.</p>
+        <ul class="tech-list">
+          <li><span class="tech-check">✓</span><div><b>Fotocromáticas</b><span>Se oscurecen con la luz solar y se aclaran al interior.</span></div></li>
+          <li><span class="tech-check">✓</span><div><b>Anti luz azul</b><span>Filtra la luz dañina de pantallas y reduce fatiga ocular.</span></div></li>
+          <li><span class="tech-check">✓</span><div><b>Progresivas</b><span>Visión nítida de cerca, media y lejos en un solo lente.</span></div></li>
+          <li><span class="tech-check">✓</span><div><b>Deportivas</b><span>Resistentes a impactos, ideales para tu disciplina.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section style="padding-top:40px" id="proceso" data-page="proceso">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">Cómo comprar</span>
+        <h2>Una compra sencilla y con garantía</h2>
+        <p>Te acompañamos desde el primer mensaje hasta que recibes tus gafas perfectas. Sin letra pequeña, sin sorpresas.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><h3>Agenda tu cita</h3><p>Escríbenos por WhatsApp o visítanos. Elegimos el día y la hora que mejor te quede.</p></div>
+        <div class="step reveal"><h3>Examen y asesoría</h3><p>Valoración visual sin costo con equipos de precisión y acompañamiento experto.</p></div>
+        <div class="step reveal"><h3>Elige y personaliza</h3><p>Seleccionamos juntos la montura y los lentes ideales para tu rostro, rutina y presupuesto.</p></div>
+        <div class="step reveal"><h3>Entrega con garantía</h3><p>Calibramos la graduación, ajustamos las gafas y te acompañamos después de la compra.</p></div>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card reveal">
+          <span class="trust-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 5-5"/></svg></span>
+          <h4>Precisión garantizada</h4>
+          <p>Si la graduación no corresponde, la corregimos sin costo.</p>
+        </div>
+        <div class="trust-card reveal">
+          <span class="trust-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 13h5"/></svg></span>
+          <h4>Atención postventa</h4>
+          <p>Ajustes, limpieza y mantenimiento para que siempre veas perfecto.</p>
+        </div>
+        <div class="trust-card reveal">
+          <span class="trust-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 7h20v10H5l-3-3z"/><path d="M6 20h12M9 17v3M15 17v3"/></svg></span>
+          <h4>Pago como prefieras</h4>
+          <p>Efectivo, transferencia, Nequi, Daviplata o tarjetas.</p>
+        </div>
+        <div class="trust-card reveal">
+          <span class="trust-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a6 6 0 016 6c0 3-1 5-1 6v1h-10v-1c0-1-1-3-1-6a6 6 0 016-6z"/><path d="M9 19h6M10 7l4 2M14 7l-4 2"/></svg></span>
+          <h4>Transparencia total</h4>
+          <p>Precios claros y cotización detallada antes de cualquier pago.</p>
+        </div>
+      </div>
+      <div class="proc-cta reveal">
+        <p>¿Listo para empezar? Reserva ahora, es gratis.</p>
+        <a class="btn btn-primary" id="proc-wa" href="#" target="_blank" rel="noopener">
+          Agenda tu cita por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="padding-top:0" data-page="inicio">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow">Testimonios</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Me sorprendió la precisión del examen y la paciencia para explicarme cada opción. Hoy veo perfecto."</p>
+          <div class="who"><span class="avatar">M</span><div><b>María Fernanda</b><span>Lentes progresivas</span></div></div>
+        </div>
+        <div class="testi reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Las monturas son de muy buena calidad y el asesor se tomó el tiempo de encontrar la ideal para mi cara."</p>
+          <div class="who"><span class="avatar">J</span><div><b>Javier Rojas</b><span>Monturas premium</span></div></div>
+        </div>
+        <div class="testi reveal">
+          <div class="stars">★★★★★</div>
+          <p>"Uso las lentes de contacto por mi rutina deportiva. La adaptación fue cómoda y el seguimiento excelente."</p>
+          <div class="who"><span class="avatar">C</span><div><b>Camila Torres</b><span>Lentes de contacto</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section style="padding-top:24px" data-page="contacto">
+    <div class="contact reveal" id="contacto">
+      <div class="wrap contact-grid">
+        <div>
+          <span class="eyebrow" style="color:rgba(255,255,255,.55)">Contacto</span>
+          <h2>Tu salud visual merece un <span class="grad-text">laboratorio de color</span></h2>
+          <p class="sub">Escríbenos por WhatsApp, llámanos o visítanos. Nuestro equipo estará encantado de atenderte.</p>
+          <div class="c-list">
+            <div class="c-item">
+              <span class="c-ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 21c0-9 4-14 12-14-2 6 2 10 6 10-2 4-8 6-10 4z"/></svg></span>
+              <div><b>WhatsApp</b><a id="wa-link" href="#" target="_blank" rel="noopener">Escríbenos ahora</a></div>
+            </div>
+            <div class="c-item">
+              <span class="c-ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.9v2a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.2 4 2 2 0 014 2h2a2 2 0 012 1.7c.13.96.36 1.9.7 2.8a2 2 0 01-.45 2.1L7.1 9.9a16 16 0 006 6l1.3-1.15a2 2 0 012.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0122 16.9z"/></svg></span>
+              <div><b>Teléfono</b><a id="phone-link" href="#">+57 300 000 00 00</a></div>
+            </div>
+            <div class="c-item">
+              <span class="c-ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M7 10h10M7 14h7M7 6h2M9 18h3"/></svg></span>
+              <div><b>Instagram</b><a id="ig-link" href="#" target="_blank" rel="noopener">@huelab.byblizz</a></div>
+            </div>
+            <div class="c-item">
+              <span class="c-ico"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div><b>Dirección</b><span id="address-text">Tu dirección aquí · Ciudad</span></div>
+            </div>
+          </div>
+          <div class="hours" id="hours-list">
+            <div><span>Lunes a viernes</span><span>9:00 a.m. – 7:00 p.m.</span></div>
+            <div><span>Sábado</span><span>10:00 a.m. – 6:00 p.m.</span></div>
+            <div><span>Domingo</span><span>Cerrado</span></div>
+            <div><span>Festivos</span><span>Hora acordada</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="map-embed">
+            <iframe id="map-frame" title="Ubicación HUE LAB by BLIZZ" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="HUE LAB by BLIZZ">
+      <img class="logo-image" src="img/logo.jpg" alt="HUE LAB by BLIZZ">
+    </a>
+    <p>© <span id="year"></span> HUE LAB by BLIZZ. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" id="wa-float" href="#" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.33 4.96L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.16c-.24.69-1.43 1.32-1.97 1.37-.5.05-1.14.24-3.83-.8-3.23-1.25-5.28-4.5-5.44-4.7-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.64-.4.85-.4h.61c.2 0 .46-.03.71.54.26.6.88 2.09.96 2.24.08.16.13.34.03.55-.11.21-.16.34-.32.52-.16.16-.34.37-.48.49-.16.16-.33.34-.14.66.19.32.84 1.38 1.8 2.24 1.24 1.11 2.28 1.46 2.61 1.62.32.16.51.13.7-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.83.86 2.14 1.01.32.16.53.24.6.37.06.13.06.77-.18 1.46z"/></svg>
+</a>
+
+<!-- GALERÍA DE PRODUCTO -->
+<div class="gal-modal" id="gal-modal" aria-hidden="true">
+  <div class="gal-backdrop" data-close></div>
+  <div class="gal-panel" role="dialog" aria-modal="true" aria-label="Galería del producto">
+    <button class="gal-close" data-close aria-label="Cerrar">×</button>
+    <div class="gal-main">
+      <button class="gal-nav gal-prev" data-prev aria-label="Anterior">‹</button>
+      <img id="gal-img" src="" alt="">
+      <button class="gal-nav gal-next" data-next aria-label="Siguiente">›</button>
+    </div>
+    <div class="gal-info">
+      <div>
+        <span class="prod-cat" id="gal-cat"></span>
+        <h3 id="gal-title"></h3>
+        <p id="gal-desc"></p>
+      </div>
+      <div class="gal-side">
+        <a class="prod-cta" id="gal-wa" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="gal-thumbs" id="gal-thumbs"></div>
+  </div>
+</div>
+
+<script>
+  /* ====== DATOS DE CONTACTO (edítalos aquí) ====== */
+  var CONFIG = {
+    WHATSAPP_NUMBER: "573008131531",        // Solo números, con código de país. Ej: 573001234567
+    WHATSAPP_MSG: encodeURIComponent("Hola HUE LAB by BLIZZ, quiero agendar una cita."),
+    PHONE_DISPLAY: "+57 300 813 15 31",
+    PHONE_TEL: "tel:+573008131531",
+    INSTAGRAM_URL: "https://instagram.com/huelab.byblizz",
+    INSTAGRAM_HANDLE: "@huelab.byblizz",
+    ADDRESS: "Calle 1 Norte #16-12 · Barrio Nueva Cecilia, Armenia, Quindío",
+    MAPS_QUERY: "Calle 1 Norte #16-12, Barrio Nueva Cecilia, Armenia, Quindío",  // Dirección para el mapa
+    MAPS_URL: "https://www.google.com/maps"
+  };
+
+  var waUrl = "https://wa.me/" + CONFIG.WHATSAPP_NUMBER + "?text=" + CONFIG.WHATSAPP_MSG;
+  document.getElementById("wa-link").href = waUrl;
+  document.getElementById("wa-float").href = waUrl;
+  document.getElementById("phone-link").href = CONFIG.PHONE_TEL;
+  document.getElementById("phone-link").textContent = CONFIG.PHONE_DISPLAY;
+  document.getElementById("ig-link").href = CONFIG.INSTAGRAM_URL;
+  document.getElementById("ig-link").textContent = CONFIG.INSTAGRAM_HANDLE;
+  document.getElementById("address-text").textContent = CONFIG.ADDRESS;
+  document.getElementById("map-frame").src = CONFIG.MAPS_URL + "?q=" + encodeURIComponent(CONFIG.MAPS_QUERY) + "&output=embed";
+  document.getElementById("year").textContent = new Date().getFullYear();
+  var procWa = document.getElementById("proc-wa");
+  if (procWa) procWa.href = waUrl;
+
+  /* ====== CATÁLOGO ====== */
+  // Cantidad de fotos por modelo (hue-01 … hue-20). Debe coincidir con las carpetas img/products/hue-XX.
+  var FOTOS_POR_MODELO = [10,10,10,10,10,10,10,10,9,9,9,9,9,9,9,9,9,9,9,9];
+
+  function pad2(n){ return (n < 10 ? "0" : "") + n; }
+  function rutaModelo(m){ return "img/products/hue-" + pad2(m) + "/hue-" + pad2(m); }
+  function imgsModelo(m){
+    var n = FOTOS_POR_MODELO[m-1], arr = [], base = rutaModelo(m);
+    for (var k = 1; k <= n; k++) arr.push(base + "-" + k + ".jpg");
+    return arr;
+  }
+  function thumbModelo(m){ return rutaModelo(m) + "-1-t.jpg"; }
+
+  // Edita aquí nombre, descripción y categoría de cada modelo.
+  // Categorías válidas: "sol", "monturas", "contacto", "especiales".
+  var MODELOS_INFO = [
+    { nombre: "HUE 01", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 02", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 03", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 04", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 05", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 06", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 07", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 08", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 09", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 10", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 11", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 12", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 13", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 14", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 15", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 16", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 17", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 18", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 19", desc: "Montura acetato · varias vistas", cat: "monturas" },
+    { nombre: "HUE 20", desc: "Montura acetato · varias vistas", cat: "monturas" }
+  ];
+
+  var PRODUCTOS = MODELOS_INFO.map(function(info, i) {
+    var m = i + 1;
+    return {
+      model: m,
+      nombre: info.nombre,
+      desc: info.desc,
+      cat: info.cat,
+      thumb: thumbModelo(m),
+      imgs: imgsModelo(m)
+    };
+  });
+
+  var CAT_LABELS = { sol: "Gafas de sol", monturas: "Monturas", contacto: "Lentes de contacto", especiales: "Especiales" };
+  var CAT_ORDER = ["sol", "monturas", "contacto", "especiales"];
+
+  function waLinkProducto(p) {
+    return "https://wa.me/" + CONFIG.WHATSAPP_NUMBER + "?text=" + encodeURIComponent("Hola HUE LAB by BLIZZ, quiero consultar por: " + p.nombre);
+  }
+
+  function renderCatalogo(filtro) {
+    var grid = document.getElementById("cat-grid");
+    grid.innerHTML = PRODUCTOS.map(function(p) {
+      if (filtro !== "todos" && p.cat !== filtro) return "";
+      return '' +
+        '<article class="prod-card reveal in">' +
+          '<div class="prod-pic" data-open-model="' + p.model + '">' +
+            '<img src="' + p.thumb + '" alt="' + p.nombre + '" loading="lazy">' +
+            '<span class="prod-count">🖼 ' + p.imgs.length + ' fotos</span>' +
+          '</div>' +
+          '<div class="prod-body">' +
+            '<span class="prod-cat">' + (CAT_LABELS[p.cat] || p.cat) + '</span>' +
+            '<h3>' + p.nombre + '</h3>' +
+            '<p>' + p.desc + '</p>' +
+            '<div class="prod-actions">' +
+              '<button class="prod-views" data-open-model="' + p.model + '">Ver fotos</button>' +
+              '<a class="prod-wa" href="' + waLinkProducto(p) + '" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">Consultar</a>' +
+            '</div>' +
+          '</div>' +
+        '</article>';
+    }).join("");
+  }
+
+  /* filtros dinámicos: solo se muestran las categorías que existan en los datos */
+  var catsPresentes = CAT_ORDER.filter(function(c) {
+    return PRODUCTOS.some(function(p) { return p.cat === c; });
+  });
+  var botonesFiltro = [{ f: "todos", label: "Todos" }].concat(catsPresentes.map(function(c) {
+    return { f: c, label: CAT_LABELS[c] || c };
+  }));
+  var filtersWrap = document.getElementById("cat-filters");
+  filtersWrap.innerHTML = botonesFiltro.map(function(b, i) {
+    return '<button class="' + (i === 0 ? "active" : "") + '" data-filter="' + b.f + '">' + b.label + '</button>';
+  }).join("");
+
+  var filtroActual = "todos";
+  var filterBtns = filtersWrap.querySelectorAll("button");
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      filterBtns.forEach(function(b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      filtroActual = btn.getAttribute("data-filter");
+      renderCatalogo(filtroActual);
+    });
+  });
+  renderCatalogo(filtroActual);
+
+  /* ====== GALERÍA DE PRODUCTO ====== */
+  var galModal = document.getElementById("gal-modal");
+  var galImg = document.getElementById("gal-img");
+  var galThumbs = document.getElementById("gal-thumbs");
+  var galIdx = 0;
+  var galProduct = null;
+
+  function setGal(i) {
+    if (!galProduct) return;
+    var n = galProduct.imgs.length;
+    galIdx = ((i % n) + n) % n;
+    galImg.src = galProduct.imgs[galIdx];
+    galImg.alt = galProduct.nombre + " · vista " + (galIdx + 1);
+    var thumbs = galThumbs.querySelectorAll("img");
+    thumbs.forEach(function(t, k) { t.classList.toggle("active", k === galIdx); });
+    var act = thumbs[galIdx];
+    if (act && act.scrollIntoView) act.scrollIntoView({ block: "nearest", inline: "center" });
+  }
+
+  function openGaleria(model) {
+    galProduct = PRODUCTOS.find(function(p) { return p.model === model; });
+    if (!galProduct) return;
+    document.getElementById("gal-cat").textContent = CAT_LABELS[galProduct.cat] || galProduct.cat;
+    document.getElementById("gal-title").textContent = galProduct.nombre;
+    document.getElementById("gal-desc").textContent = galProduct.desc;
+    document.getElementById("gal-wa").href = waLinkProducto(galProduct);
+    galThumbs.innerHTML = galProduct.imgs.map(function(src, i) {
+      return '<img src="' + src + '" data-i="' + i + '" alt="' + galProduct.nombre + ' vista ' + (i + 1) + '" loading="lazy" class="' + (i === 0 ? "active" : "") + '">';
+    }).join("");
+    galThumbs.querySelectorAll("img").forEach(function(t) {
+      t.addEventListener("click", function() { setGal(parseInt(t.getAttribute("data-i"), 10)); });
+    });
+    setGal(0);
+    galModal.classList.add("open");
+    galModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function cerrarGaleria() {
+    galModal.classList.remove("open");
+    galModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    galProduct = null;
+  }
+
+  document.addEventListener("click", function(e) {
+    var trigger = e.target.closest ? e.target.closest("[data-open-model]") : null;
+    if (trigger) {
+      e.preventDefault();
+      openGaleria(parseInt(trigger.getAttribute("data-open-model"), 10));
+      return;
+    }
+    if (e.target.closest && e.target.closest("[data-close]")) cerrarGaleria();
+    else if (e.target.closest && e.target.closest("[data-prev]")) setGal(galIdx - 1);
+    else if (e.target.closest && e.target.closest("[data-next]")) setGal(galIdx + 1);
+  });
+
+  document.addEventListener("keydown", function(e) {
+    if (!galModal.classList.contains("open")) return;
+    if (e.key === "Escape") cerrarGaleria();
+    else if (e.key === "ArrowLeft") setGal(galIdx - 1);
+    else if (e.key === "ArrowRight") setGal(galIdx + 1);
+  });
+
+  /* ====== NAVEGACIÓN POR VENTANAS ====== */
+  var PAGINAS = {};
+  document.querySelectorAll("[data-page]").forEach(function(sec){
+    var p = sec.getAttribute("data-page");
+    PAGINAS[p] = PAGINAS[p] || [];
+    PAGINAS[p].push(sec);
+  });
+
+  function mostrarPagina(nombre) {
+    if (!PAGINAS[nombre]) return;
+    Object.keys(PAGINAS).forEach(function(k){
+      PAGINAS[k].forEach(function(el){
+        if (k === nombre) el.classList.remove("hidden");
+        else el.classList.add("hidden");
+      });
+    });
+    // Anima los elementos "reveal" de la ventana visible
+    requestAnimationFrame(function(){
+      PAGINAS[nombre].forEach(function(el){
+        el.querySelectorAll(".reveal").forEach(function(r){ r.classList.add("in"); });
+      });
+    });
+    document.querySelectorAll(".nav-links a").forEach(function(a){
+      a.classList.toggle("active", a.getAttribute("href") === "#" + nombre);
+    });
+    if (menu.classList.contains("open")) menu.classList.remove("open");
+    if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  document.addEventListener("click", function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (a) {
+      var target = a.getAttribute("href").slice(1);
+      if (PAGINAS[target]) {
+        e.preventDefault();
+        history.replaceState(null, "", "#" + target);
+        mostrarPagina(target);
+      }
+    }
+  });
+
+  window.addEventListener("hashchange", function(){
+    mostrarPagina(location.hash.slice(1) || "inicio");
+  });
+
+  mostrarPagina(location.hash.slice(1) || "inicio");
+
+  /* ====== MENÚ MÓVIL ====== */
+  var burger = document.getElementById("burger");
+  var menu = document.getElementById("menu");
+  burger.addEventListener("click", function(){
+    menu.classList.toggle("open");
+  });
+
+  /* ====== MARQUEE (duplicar para loop continuo) ====== */
+  var track = document.getElementById("marquee");
+  track.innerHTML += track.innerHTML;
+
+  /* ====== REVEAL ON SCROLL ====== */
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add("in"); });
+  }
+</script>
+</body>
+</html>
