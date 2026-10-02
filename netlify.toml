@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  values = { Cache-Control = "public, max-age=0, must-revalidate" }
+
+[[headers]]
+  for = "/img/*"
+  values = { Cache-Control = "public, max-age=86400, immutable" }
