@@ -10,6 +10,11 @@
 <meta property="og:site_name" content="HUE LAB by BLIZZ">
 <meta property="og:title" content="HUE LAB by BLIZZ | Óptica Profesional">
 <meta property="og:description" content="Óptica profesional en Armenia, Quindío. Examen visual sin costo, lentes de medida, de contacto, especiales, gafas de sol y monturas.">
+<meta name="theme-color" content="#101416">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="HUE LAB">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://huelabbyblizzarmeniaquindio.netlify.app/">
 <meta property="og:image" content="https://huelabbyblizzarmeniaquindio.netlify.app/img/logo.jpg">
 <meta property="og:url" content="https://huelabbyblizzarmeniaquindio.netlify.app/">
 <meta name="twitter:card" content="summary">
@@ -47,12 +52,13 @@
     --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;overflow-x:hidden}
   body{
     font-family:var(--sans);
     background:var(--bg);
     color:var(--ink);
     line-height:1.6;
+    overflow-x:hidden;
     -webkit-font-smoothing:antialiased;
   }
   img{max-width:100%;display:block}
@@ -452,6 +458,18 @@
     section{padding:72px 0}
     .contact{padding:40px 26px;margin:0 16px}
     .hero-meta{gap:18px;flex-wrap:wrap}
+    .wa-float{width:52px;height:52px;right:16px;bottom:16px}
+    .wrap{padding:0 16px}
+    .nav-links.open{padding:14px 16px 20px}
+    .prod-actions{grid-template-columns:1fr 1fr}
+    .trust-card{padding:24px 18px}
+    .step{padding:20px 18px 22px}
+    .step h3{padding-left:38px}
+    .gal-thumbs{padding:14px 18px 20px}
+  }
+  @media(max-width:360px){
+    .hero-meta b{font-size:1.5rem}
+    .gal-panel{width:96vw}
   }
 </style>
 </head>
@@ -491,7 +509,7 @@
           <a class="btn btn-ghost" href="#catalogo">Ver colección</a>
         </div>
         <div class="hero-meta">
-          <div><b>+10</b><span>Años de experiencia</span></div>
+          <div><b>2</b><span>Meses de experiencia</span></div>
           <div><b>+4.500</b><span>Clientes satisfechos</span></div>
           <div><b>100%</b><span>Garantía profesional</span></div>
         </div>
@@ -1099,6 +1117,9 @@
   var menu = document.getElementById("menu");
   burger.addEventListener("click", function(){
     menu.classList.toggle("open");
+  });
+  menu.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){ menu.classList.remove("open"); });
   });
 
   /* ====== MARQUEE (duplicar para loop continuo) ====== */
