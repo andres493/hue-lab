@@ -1,5 +1,5 @@
 @echo off
-title Publicar HUE LAB by BLIZZ
+title Publicar Óptica en Armenia HUE LAB
 cd /d "%~dp0"
 git add -A
 git commit -m "Actualizacion del sitio web"
