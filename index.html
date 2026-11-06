@@ -32,51 +32,64 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Optician",
-  "@id": "https://huelabbyblizzarmeniaquindio.netlify.app/#optica",
-  "name": "Óptica en Armenia HUE LAB",
-  "alternateName": ["HUE LAB", "HUE LAB by BLIZZ", "Óptica en Armenia"],
-  "url": "https://huelabbyblizzarmeniaquindio.netlify.app/",
-  "image": "https://huelabbyblizzarmeniaquindio.netlify.app/img/logo.jpg",
-  "logo": "https://huelabbyblizzarmeniaquindio.netlify.app/img/logo.jpg",
-  "description": "Óptica en Armenia HUE LAB: examen visual sin costo, lentes de medida, de contacto, especiales, gafas de sol y monturas en Armenia, Quindío.",
-  "slogan": "La vista merece su propio laboratorio de color",
-  "telephone": "+573008131531",
-  "priceRange": "$$",
-  "currenciesAccepted": "COP",
-  "paymentAccepted": "Efectivo, Nequi, Daviplata, Tarjetas",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Calle 1 Norte #16-12, Barrio Nueva Cecilia",
-    "addressLocality": "Armenia",
-    "addressRegion": "Quindío",
-    "addressCountry": "CO"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 4.5461649,
-    "longitude": -75.6633121
-  },
-  "hasMap": "https://maps.app.goo.gl/jHbH5bKxUfHrGT9k9",
-  "areaServed": [
-    { "@type": "City", "name": "Armenia" },
-    { "@type": "AdministrativeArea", "name": "Quindío" }
-  ],
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "19:00"
+      "@type": "Optician",
+      "@id": "https://huelabbyblizzarmeniaquindio.netlify.app/#optica",
+      "name": "Óptica en Armenia HUE LAB",
+      "alternateName": ["HUE LAB", "HUE LAB by BLIZZ", "Óptica en Armenia"],
+      "url": "https://huelabbyblizzarmeniaquindio.netlify.app/",
+      "image": "https://huelabbyblizzarmeniaquindio.netlify.app/img/logo.jpg",
+      "logo": "https://huelabbyblizzarmeniaquindio.netlify.app/img/logo.jpg",
+      "description": "Óptica en Armenia HUE LAB: examen visual sin costo, lentes de medida, de contacto, especiales, gafas de sol y monturas en Armenia, Quindío.",
+      "slogan": "La vista merece su propio laboratorio de color",
+      "telephone": "+573008131531",
+      "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "paymentAccepted": "Efectivo, Nequi, Daviplata, Tarjetas",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 1 Norte #16-12, Barrio Nueva Cecilia",
+        "addressLocality": "Armenia",
+        "addressRegion": "Quindío",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 4.5461649,
+        "longitude": -75.6633121
+      },
+      "hasMap": "https://maps.app.goo.gl/jHbH5bKxUfHrGT9k9",
+      "areaServed": [
+        { "@type": "City", "name": "Armenia" },
+        { "@type": "AdministrativeArea", "name": "Quindío" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": ["https://instagram.com/huelab.byblizz", "https://maps.app.goo.gl/jHbH5bKxUfHrGT9k9"]
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "10:00",
-      "closes": "18:00"
+      "@type": "WebSite",
+      "@id": "https://huelabbyblizzarmeniaquindio.netlify.app/#website",
+      "url": "https://huelabbyblizzarmeniaquindio.netlify.app/",
+      "name": "Óptica en Armenia HUE LAB",
+      "alternateName": ["HUE LAB", "HUE LAB by BLIZZ"],
+      "inLanguage": "es-CO",
+      "publisher": { "@id": "https://huelabbyblizzarmeniaquindio.netlify.app/#optica" }
     }
-  ],
-  "sameAs": ["https://instagram.com/huelab.byblizz", "https://maps.app.goo.gl/jHbH5bKxUfHrGT9k9"]
+  ]
 }
 </script>
 <style>
